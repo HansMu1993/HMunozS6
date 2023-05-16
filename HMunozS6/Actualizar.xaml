@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HMunozS6.Actualizar">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro de estudiantes" HorizontalTextAlignment="Center" FontSize="20" />
+
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese el Codigo"/>
+            <Entry x:Name="txtxNombre" Placeholder="Ingrese el Nombre"/>
+            <Entry x:Name="txtxApellido" Placeholder="Ingrese el Apellido"/>
+            <Entry x:Name="txtxEdad" Placeholder="Ingrese Edad"  Keyboard="Numeric"/>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnActualizar" Text="Actualizar" Clicked="BtnActualizar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="BtnEliminar" Text="Eliminar" Clicked="BtnEliminar_Clicked_1" Grid.Row="0" Grid.Column="1"/>
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

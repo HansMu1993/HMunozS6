@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HMunozS6.Registro">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Registro de estudiantes" HorizontalTextAlignment="Center" FontSize="20" />
+
+            <Entry x:Name="txtCodigo" Placeholder="Ingrese el Codigo"/>
+            <Entry x:Name="txtxNombre" Placeholder="Ingrese el Nombre"/>
+            <Entry x:Name="txtxApellido" Placeholder="Ingrese el Apellido"/>
+            <Entry x:Name="txtxEdad" Placeholder="Ingrese Edad"  Keyboard="Numeric"/> 
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="BtnInsertar" Text="Insertar" Clicked="BtnInsertar_Clicked" Grid.Row="0" Grid.Column="0"/>
+                <Button x:Name="BtnRegresar" Text="Regresar" Clicked="BtnRegresar_Clicked" Grid.Row="0" Grid.Column="1"/>
+
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

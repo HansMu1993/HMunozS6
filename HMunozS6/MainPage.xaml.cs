@@ -18,22 +18,36 @@ namespace HMunozS6
         private readonly HttpClient client = new HttpClient();
         private ObservableCollection<Estudiante> _post;
 
+        /// <summary>
+        /// Constructor Principal
+        /// </summary>
         public MainPage()
         {
             InitializeComponent();
             ConsultarDatos();
         }
-
+        /// <summary>
+        /// navegacion dePagina
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Registro_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Registro());
         }
+        /// <summary>
+        /// boton pra refrescar 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void BtnGet_Clicked(object sender, EventArgs e)
         {
             ConsultarDatos();
         }
-
+        /// <summary>
+        /// metodo de consulta de Datos
+        /// </summary>
         private async void ConsultarDatos()
         {
             try
@@ -50,13 +64,14 @@ namespace HMunozS6
                 string exx;
                 exx = ex.Message;
             }
-            //var content = await client.GetStringAsync(Url);
-            //List<VehicleResponse> response = JsonConvert.DeserializeObject<List<VehicleResponse>>(content);
-            //_post = new ObservableCollection<VehicleResponse>(response);
-
-            //MyListView.ItemsSource = _post;
+          
         }
 
+        /// <summary>
+        /// Metodo de toma de datos de Un List View
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MyListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var v = MyListView.SelectedItem;

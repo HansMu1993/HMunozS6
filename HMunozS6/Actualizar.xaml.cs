@@ -14,6 +14,10 @@ namespace HMunozS6
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Actualizar : ContentPage
     {
+        /// <summary>
+        /// Metodo contructor Principal
+        /// </summary>
+        /// <param name="estudiante"></param>
         public Actualizar( Estudiante estudiante)
         {
             InitializeComponent();
@@ -28,7 +32,11 @@ namespace HMunozS6
         {
 
         }
-
+        /// <summary>
+        /// Metodo para Actualizar DAtos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void BtnActualizar_Clicked(object sender, EventArgs e)
         {
             WebClient client = new WebClient();
@@ -66,6 +74,11 @@ namespace HMunozS6
 
 
         }
+        /// <summary>
+        /// Metodo Para eliminar Datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private async void BtnEliminar_Clicked_1(object sender, EventArgs e)
         {

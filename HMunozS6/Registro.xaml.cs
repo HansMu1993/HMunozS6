@@ -13,12 +13,18 @@ namespace HMunozS6
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registro : ContentPage
-    {
+    {/// <summary>
+    /// Constructor Principal
+    /// </summary>
         public Registro()
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Metodo de Ingreso de datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnInsertar_Clicked(object sender, EventArgs e)
         {
             try
@@ -42,6 +48,11 @@ namespace HMunozS6
             }
         }
 
+        /// <summary>
+        /// Boton para regresar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnRegresar_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new MainPage());
